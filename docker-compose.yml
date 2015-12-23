@@ -1,0 +1,79 @@
+webserver:
+  image: janoschii/webird:latest
+  # links:
+  #   - mysql:mysql
+  ports:
+    - "80:80"
+    - "443:443"
+  # volumes_from:
+  #   - app
+  # volumes:
+    # - "./logs/:/var/www/phalcon/"
+  # environment:
+  #   NGINX_GENERATE_DEFAULT_VHOST: "true"
+
+
+# composer:
+#   build: images/composer
+#   volumes_from:
+#     - app
+
+# artisan:
+#   build: images/artisan
+#   links:
+#     - worker:worker
+#     - mysql:mysql
+#     - redis:redis
+#     - memcached:memcached
+#     - beanstalkd:beanstalkd
+#   volumes_from:
+#     - apidata
+  
+# app:
+#   image: busybox
+#   volumes:
+#     # - "./config/custom.conf:/data/conf/nginx/custom.conf"
+#     - "./www/:/var/www/"
+
+# mysql:
+#   image: tutum/mysql
+#   ports:
+#     - "3306:3306"
+#   environment:
+#     MYSQL_PASS: "password"
+#     ON_CREATE_DB: "apidb"
+
+# mongodb:
+#   image: tutum/mongodb
+#   ports:
+#     - "27017:27017"
+#     - "28017:28017"
+#   environment:
+#     MONGODB_PASS: password
+
+# beanstalkd:
+#   image: chriskite/beanstalkd
+#   ports: 
+#     - "11300:11300"
+
+# memcached:
+#   image: tutum/memcached
+#   ports:
+#     - "11211:11211"
+#   environment:
+#     MEMCACHED_PASS: password
+
+# redis:
+#   image: tutum/redis
+#   ports:
+#     - "6379:6379"
+#   environment:
+#     REDIS_PASS: password
+
+# elasticsearch:
+#   image: tutum/elasticsearch
+#   ports:
+#     - "9200:9200"
+#   environment:
+#     ELASTICSEARCH_USER: admin
+#     ELASTICSEARCH_PASS: password
