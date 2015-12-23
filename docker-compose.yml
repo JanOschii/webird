@@ -1,5 +1,5 @@
 webserver:
-  image: janoschii/webird:latest
+  image: webird
   # links:
   #   - mysql:mysql
   ports:
