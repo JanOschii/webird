@@ -27,11 +27,12 @@ RUN \
 USER root
 RUN \
   export DEBIAN_FRONTEND=noninteractive && \
+  apt-get update && \
   apt-get install -y daemontools && \
-  mkdir  mkdir -p /etc/dockerservices/nginx && \
-  mkdir  mkdir -p /etc/dockerservices/mysql && \
-  echo "#!/bin/bash\nexec /usr/sbin/nginx" > /etc/dockerservices/nginx/run && \
-  echo "#!/bin/bash\nexec /usr/sbin/mysqld" > /etc/dockerservices/mysql/run && \
+  mkdir -p /etc/dockerservices/nginx && \
+  mkdir -p /etc/dockerservices/mysql && \
+  echo '#!/bin/bash\nexec /usr/sbin/nginx' > /etc/dockerservices/nginx/run && \
+  echo '#!/bin/bash\nexec /usr/sbin/mysqld' > /etc/dockerservices/mysql/run && \
   chmod -R +x /etc/dockerservices
 
 # Webserver ports

@@ -7,3 +7,9 @@ dev/npm-debug.log
 dev/node_modules/
 dev/bower_components/
 dev/vendor/
+create.sh
+docker-compose.yml
+down.sh
+install.sh
+run.sh
+up.sh

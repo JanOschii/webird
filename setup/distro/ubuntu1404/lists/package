@@ -15,15 +15,20 @@ gcc
 make
 pkg-config
 re2c
+wget
 # environments
 nginx
 mariadb-server
 mariadb-client
 php-pear
+php5-gd
+php5-imap
+php-pear
 php5-common
 php5-cli
 php5-fpm
 php5-mysqlnd
+nodejs
 # dev libraries
 php5-dev
 libpcre3-dev
