@@ -28,7 +28,6 @@ php5-common
 php5-cli
 php5-fpm
 php5-mysqlnd
-nodejs
 # dev libraries
 php5-dev
 libpcre3-dev
